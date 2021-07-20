@@ -38,8 +38,7 @@ I2C1 and I2C2 Mode and Configuration/ Parameter Settings:
 
   
 ## API usage
-1. Download APDS9930.c from the APDS9930_API/Core/Src and APDS9930.h from the APDS_API/Core/Inc 
-directory;
+1. Download APDS9930.c and APDS9930.h from library directory;
 2. Copy APDS9930.h to your projec's Inc directory and the APDS9930.c to your projec's Src directory;
 3. Include where you expect to use.
 
