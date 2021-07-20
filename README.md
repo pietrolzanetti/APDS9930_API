@@ -1,7 +1,7 @@
 # APDS9930_API
 
 ## Introduction
-This API was developed as a work in the discipline of Embedded Systems Programming at UFMG - Prof. Ricardo de Oliveira Duarte - Department of Electronic Engineering
+This API was developed by Pietro Zanetti and Pedro Bahia as a work in the discipline of Embedded Systems Programming at UFMG - Prof. Ricardo de Oliveira Duarte - Department of Electronic Engineering.
 
 Library is developed and tested with STM32F1xx (Nucleo 64 board). 
 
