@@ -50,32 +50,32 @@ bool APDS9930_Init();
  
  
  ```C
- bool APDS9930_WriteRegData(uint8_t reg, uint8_t data);
+ bool APDS9930_WriteRegData(uint8_t reg_adr, uint8_t data);
  ```
 Write 8-bit data in one APDS9930 internal register.
 
 Parameters:
-  * ```reg```: Internal memory address;
+  * ```reg_adr```: Internal memory address;
   * ```data```: Data buffer;
  
  
 ```C
-bool APDS9930_WriteWordData(uint8_t reg, uint16_t data);
+bool APDS9930_WriteWordData(uint8_t reg_adr, uint16_t data);
 ```
-Write 16-bit data in two APDS9930 internal register
+Write 16-bit data in two APDS9930 internal register.
 
 Parameters:
-  * ```reg```: Internal memory address;
+  * ```reg_adr```: Internal memory address;
   * ```data```: Data buffer;
 
 
 ```C
-uint8_t APDS9930_ReadRegData(uint8_t reg);
+uint8_t APDS9930_ReadRegData(uint8_t reg_adr);
 ```
 Return 8-bit data written in one APDS9930 internal register.
 
 Parameters:
-  * ```reg```: Internal memory address;
+  * ```reg_adr```: Internal memory address;
 
 
 ```C
@@ -122,9 +122,11 @@ Begin interrupt treatment and define cause of interruption.
 void Prox_treat(uint16_t data);
 ```
 Triggered by proximity sensor interrupt. Define which threshold was passed.
+  *	Turn off the led if it was the high threshold.
+  *	Do nothing if it was the low one.
 
 Parameters:
-  * ```data```: ;
+  * ```data```: Proximity data in PDATA register;
 
 
 ```C
