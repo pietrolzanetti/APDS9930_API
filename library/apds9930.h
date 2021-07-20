@@ -1,28 +1,30 @@
-/*
- * apds9930.h
+
+/*******************************************************************************************************
+ * file			: apds9930.h
+ * API files	: apds9930.h and apds9930.c
+ * date 		: 19/07/2021
+ * authors		: Pedro Barbosa Bahia and Pietro Zanetti
+ * license		: GNU General Public License v3.0
+ * university	: Universidade Federal de Minas Gerais (UFMG) - Brazil
  *
- *  Created on: 17 de jul de 2021
- *      Author: Pedro
+ * This API was an assignment for UFMG's course "Embbedded Systems Programing"
+ * instructed by Prof. Ricardo de Oliveira Duarte -
+ * - Departamento de Engenharia Eletr�nica (Electronics Engineering)
+ *
+ * API inspired includes a ssd1306 library by Tilen Majerle<tilen@majerle.eu> and Alexander Lutsai<s.lyra@ya.ru>
+ * Also
+ *******************************************************************************************************
+ * API hardware and software requisites:
+ *
+ * STMicroelectronics' nucleo64 STM32F401 kit (code can be adapted to other kits)
+ * APDS9930 Proximity Sensor
+ * SSD1306 OLED
+ *******************************************************************************************************
  */
 
 #ifndef INC_APDS9930_H_
 #define INC_APDS9930_H_
 
-/*
- * This library uses I2C communication
- * It's inspired on ssd1306 library by Tilen Majerle<tilen@majerle.eu> and Alexander Lutsai<s.lyra@ya.ru>
- * and in APDS9930 datasheet section "Basic Software Operation"
- *
- *Functions include:
- *	Initialize APDS9930
- * 	Read/Write data of/in one register
- *	Set
- *
- *
- *
- *
- *
- **/
 
 
 /* I2C address */
