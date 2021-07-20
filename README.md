@@ -3,6 +3,7 @@
 ## Introduction
 This API was developed as a work in the discipline of Embedded Systems Programming at UFMG - Prof. Ricardo de Oliveira Duarte - Department of Electronic EngineeringLibrary is 
 developed and tested with STM32F1xx (Nucleo 64 board). 
+The main.c file contain exemples of usage based in Bare Metal programming. Therefore, the functions used in the exemple are executated by the hardwarewhen the interruption caused by the peripherals is enabled for CPU service. When not executing the instructions of the function, CPU will be executing the infinite loop.
 
 ## Hardware requirements
 * STM32F41xx microntroller;
@@ -83,5 +84,52 @@ Return 16-bit data written in two APDS9930 internal register.
 
 Parameters:
   * ```reg_adr```: Internal memory address;.
+
+
+```C
+bool set_PIT(uint16_t low, uint16_t high);
+```
+Set values of lower and upper thresholds of Proximity Sensor
+
+Parameters:
+  * ```low```: Proximity interruption low threshold value;
+  * ```high```: Proximity interruption high threshold value;
+
+
+```C
+int which_INT();
+```
+Get interruption origin:
+  *	0 - No interruption.
+  *	1 - ALS interruption.
+  *	2 - Proximity interruption.
+
+
+```C
+uint16_t Prox_data();
+```
+Get actual proximity measured data.
+
+
+```C
+void interrup_treat();
+```
+Begin interrupt treatment and define cause of interruption.
+
+
+```C
+void Prox_treat(uint16_t data);
+```
+Triggered by proximity sensor interrupt. Define which threshold was passed.
+
+Parameters:
+  * ```data```: ;
+
+
+```C
+bool clear_INT();
+```
+Interrupt clear.
+
 
 
