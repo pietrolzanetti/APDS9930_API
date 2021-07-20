@@ -1,8 +1,9 @@
 # APDS9930_API
 
 ## Introduction
-This API was developed as a work in the discipline of Embedded Systems Programming at UFMG - Prof. Ricardo de Oliveira Duarte - Department of Electronic EngineeringLibrary is 
-developed and tested with STM32F1xx (Nucleo 64 board). 
+This API was developed as a work in the discipline of Embedded Systems Programming at UFMG - Prof. Ricardo de Oliveira Duarte - Department of Electronic Engineering
+
+Library is developed and tested with STM32F1xx (Nucleo 64 board). 
 
 The main.c file contain exemples of usage based in Bare Metal programming. Therefore, the functions used in the exemple are executated by the hardware when the interruption caused by the peripherals is enabled for CPU service. When not executing the instructions of the function, CPU will be executing the infinite loop.
 
