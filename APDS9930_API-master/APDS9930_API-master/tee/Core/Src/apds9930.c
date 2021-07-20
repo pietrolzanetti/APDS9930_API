@@ -2,15 +2,28 @@
 
 #include "apds9930.h"
 
+/*
+# This API was developed by Pietro Zanetti and Pedro Bahia, finished in july 19th, as a work in the discipline of Embedded Systems Programming at UFMG - 
+# Prof. Ricardo de Oliveira Duarte - Department of Electronic Engineering. This is the first version of the software and is under free license.
+
+# Library is developed and tested with STM32F4xx (Nucleo 64 board).
+
+# The actual hardware requeriments are a STM32F41xx microntroller, APDS-9930 ALS IR RGB and Gesture Sensor Proximity Sensor 
+# and a 0.96 Inch Yellow and Blue I2C IIC Serial 128X64 OLED Display.
+
+# The main.c file contain exemples of usage based in Bare Metal programming. Therefore, the functions used in the exemple are executated by 
+# the hardware when the interruption caused by the peripherals is enabled for CPU service. When not executing the instructions of the function, 
+# CPU will be executing the infinite loop.
+*/
 
 extern I2C_HandleTypeDef hi2c3;   //I2C port, change the number to select the right interface
 
 /*Pseudo-code from datasheet
  *
  * uint8 ATIME, PIME, WTIME, PPULSE;
-ATIME = 0xff; // 2.7 ms – minimum ALS integration time
-WTIME = 0xff; // 2.7 ms – minimum Wait time
-PTIME = 0xff; // 2.7 ms – minimum Prox integration time
+ATIME = 0xff; // 2.7 ms â€“ minimum ALS integration time
+WTIME = 0xff; // 2.7 ms â€“ minimum Wait time
+PTIME = 0xff; // 2.7 ms â€“ minimum Prox integration time
 PPULSE = 1; // Minimum prox pulse count
 WriteRegData(0, 0); //Disable and Powerdown
 WriteRegData (1, ATIME);
@@ -114,9 +127,9 @@ bool APDS9930_Init(){
 
 	HAL_StatusTypeDef ref;		//check operation completeness
 	uint8_t ATIME, WTIME, PTIME,PPULSE;
-	ATIME = 0xff; // 2.7 ms – minimum ALS integration time
-	WTIME = 0xff; // 2.7 ms – minimum Wait time
-	PTIME = 0xff; // 2.7 ms – minimum Prox integration time
+	ATIME = 0xff; // 2.7 ms â€“ minimum ALS integration time
+	WTIME = 0xff; // 2.7 ms â€“ minimum Wait time
+	PTIME = 0xff; // 2.7 ms â€“ minimum Prox integration time
 	PPULSE = 1; // Minimum prox pulse count
 
 	ref = APDS9930_WriteRegData(0, 0); //Disable and Powerdown
