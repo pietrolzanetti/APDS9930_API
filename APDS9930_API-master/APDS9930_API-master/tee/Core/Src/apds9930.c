@@ -2,19 +2,28 @@
 
 #include "apds9930.h"
 
-/*
-# This API was developed by Pietro Zanetti and Pedro Bahia, finished in july 19th, as a work in the discipline of Embedded Systems Programming at UFMG - 
-# Prof. Ricardo de Oliveira Duarte - Department of Electronic Engineering. This is the first version of the software and is under free license.
-
-# Library is developed and tested with STM32F4xx (Nucleo 64 board).
-
-# The actual hardware requeriments are a STM32F41xx microntroller, APDS-9930 ALS IR RGB and Gesture Sensor Proximity Sensor 
-# and a 0.96 Inch Yellow and Blue I2C IIC Serial 128X64 OLED Display.
-
-# The main.c file contain exemples of usage based in Bare Metal programming. Therefore, the functions used in the exemple are executated by 
-# the hardware when the interruption caused by the peripherals is enabled for CPU service. When not executing the instructions of the function, 
-# CPU will be executing the infinite loop.
-*/
+/*******************************************************************************************************
+ * file			: apds9930.h
+ * API files	: apds9930.h and apds9930.c
+ * date 		: 19/07/2021
+ * authors		: Pedro Barbosa Bahia and Pietro Zanetti
+ * license		: GNU General Public License v3.0
+ * university	: Universidade Federal de Minas Gerais (UFMG) - Brazil
+ *
+ * This API was an assignment for UFMG's course "Embbedded Systems Programing"
+ * instructed by Prof. Ricardo de Oliveira Duarte -
+ * - Departamento de Engenharia Eletrônica (Electronics Engineering)
+ *
+ * API inspired includes a ssd1306 library by Tilen Majerle<tilen@majerle.eu> and Alexander Lutsai<s.lyra@ya.ru>
+ * Also
+ *******************************************************************************************************
+ * API hardware and software requisites:
+ *
+ * STMicroelectronics' nucleo64 STM32F401 kit (code can be adapted to other kits)
+ * APDS9930 Proximity Sensor
+ * SSD1306 OLED
+ *******************************************************************************************************
+ */
 
 extern I2C_HandleTypeDef hi2c3;   //I2C port, change the number to select the right interface
 
